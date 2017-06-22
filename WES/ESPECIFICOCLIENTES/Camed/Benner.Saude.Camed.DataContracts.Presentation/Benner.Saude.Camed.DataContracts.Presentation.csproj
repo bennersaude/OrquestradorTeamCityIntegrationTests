@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECABB017-1CF2-4F07-B527-E75B53365923}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Benner.Saude.Camed.DataContracts.Presentation</RootNamespace>
+    <AssemblyName>Benner.Saude.Camed.DataContracts.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\#WEBAPP\Camed\Bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PRESENTATIONLAYER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\#WEBAPP\Camed\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Benner.Tecnologia.EnterpriseServiceLibrary, Version=2008.0.0.0, Culture=neutral, PublicKeyToken=f2db26731026fd37, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Benner.Tecnologia.EnterpriseServiceLibrary.dll.16.0.30.8\lib\net461\Benner.Tecnologia.EnterpriseServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Benner.Tecnologia.Common2, Version=2008.0.0.0, Culture=neutral, PublicKeyToken=f2db26731026fd37, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Benner.Tecnologia.Common2.dll.16.0.30.8\lib\net461\Benner.Tecnologia.Common2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\Servidor\ESPECIFICOCLIENTES\Camed\Camed.DataContracts\Prestadores\GerarModeloContrato\GerarModeloDocumentoRequest.cs">
+      <Link>Prestadores\GerarModeloContrato\GerarModeloDocumentoRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Servidor\ESPECIFICOCLIENTES\Camed\Camed.DataContracts\Prestadores\GerarModeloContrato\GerarModeloDocumentoResponse.cs">
+      <Link>Prestadores\GerarModeloContrato\GerarModeloDocumentoResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Servidor\ESPECIFICOCLIENTES\Camed\Camed.DataContracts\Prestadores\GerarModeloContrato\Interface\IPrestadorService.cs">
+      <Link>Prestadores\GerarModeloContrato\Interface\IPrestadorService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Servidor\ESPECIFICOCLIENTES\Camed\Camed.DataContracts\Prestadores\GerarModeloContrato\ModeloTipo.cs">
+      <Link>Prestadores\GerarModeloContrato\ModeloTipo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DataContracts\Presentation\Benner.Saude.DataContracts.Presentation.csproj">
+      <Project>{10b5f938-c519-4b24-8c83-150add65147f}</Project>
+      <Name>Benner.Saude.DataContracts.Presentation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
